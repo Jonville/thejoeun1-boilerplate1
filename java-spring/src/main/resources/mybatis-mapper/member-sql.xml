@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thejoeun.practice1.boilerplate1.repository.mapper.MemberMapper">
+
+    <!-- 멤버 한명 search -->
+    <select id="selectMember" parameterType="hashmap" resultType="Member">
+        SELECT
+            id,
+            email
+        FROM
+            member
+        WHERE
+            1=1
+        AND
+            id = #{id}
+    </select>
+
+    <!-- 멤버 All search -->
+    <select id="selectMemberList" parameterType="hashmap" resultType="Member">
+        SELECT
+            id,
+            email
+        FROM
+            member
+    </select>
+
+</mapper>
