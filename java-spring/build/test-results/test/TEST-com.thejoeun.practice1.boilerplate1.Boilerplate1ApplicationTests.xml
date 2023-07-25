@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.thejoeun.practice1.boilerplate1.Boilerplate1ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-07-25T05:56:16" hostname="DESKTOP-FGQKVR9" time="0.5">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.thejoeun.practice1.boilerplate1.Boilerplate1ApplicationTests" time="0.5"/>
+  <system-out><![CDATA[14:56:09.444 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [Boilerplate1ApplicationTests]: using SpringBootContextLoader
+14:56:09.450 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.thejoeun.practice1.boilerplate1.Boilerplate1ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:56:09.451 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.thejoeun.practice1.boilerplate1.Boilerplate1ApplicationTests]: Boilerplate1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:56:09.478 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [Boilerplate1ApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+14:56:09.571 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [D:\fullstack-cloud-course\springboot-study\thejoeun1-boilerplate1\java-spring\build\classes\java\main\com\thejoeun\practice1\boilerplate1\Boilerplate1Application.class]
+14:56:09.573 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.thejoeun.practice1.boilerplate1.Boilerplate1Application for test class com.thejoeun.practice1.boilerplate1.Boilerplate1ApplicationTests
+14:56:09.699 [Test worker] DEBUG org.springframework.test.context.util.TestContextSpringFactoriesUtils -- Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+14:56:09.713 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [Boilerplate1ApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+14:56:09.717 [Test worker] DEBUG org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener -- Before test class: class [Boilerplate1ApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::      (v3.0.10-SNAPSHOT)
+
+2023-07-25T14:56:10.232+09:00  INFO 19940 --- [    Test worker] c.t.p.b.Boilerplate1ApplicationTests     : Starting Boilerplate1ApplicationTests using Java 17.0.6 with PID 19940 (started by tj in D:\fullstack-cloud-course\springboot-study\thejoeun1-boilerplate1\java-spring)
+2023-07-25T14:56:10.234+09:00  INFO 19940 --- [    Test worker] c.t.p.b.Boilerplate1ApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2023-07-25T14:56:11.468+09:00  INFO 19940 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-25T14:56:11.553+09:00  INFO 19940 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interfaces.
+2023-07-25T14:56:12.432+09:00  INFO 19940 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-25T14:56:12.509+09:00  INFO 19940 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-07-25T14:56:12.915+09:00  INFO 19940 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-25T14:56:13.059+09:00  INFO 19940 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1186374c
+2023-07-25T14:56:13.061+09:00  INFO 19940 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-25T14:56:13.109+09:00  INFO 19940 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+Hibernate: 
+    
+    drop table if exists member
+Hibernate: 
+    
+    create table member (
+       id bigint not null auto_increment,
+        access_token varchar(2000),
+        access_token_expire_in bigint,
+        authority varchar(255),
+        email varchar(255) not null,
+        nickname varchar(255),
+        password varchar(255),
+        provider varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2023-07-25T14:56:14.152+09:00  INFO 19940 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-25T14:56:14.162+09:00  INFO 19940 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-25T14:56:14.772+09:00  WARN 19940 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-25T14:56:15.356+09:00  INFO 19940 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4244e477, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8f8717b, org.springframework.security.web.context.SecurityContextHolderFilter@118f2486, org.springframework.security.web.header.HeaderWriterFilter@3f31892e, org.springframework.security.web.authentication.logout.LogoutFilter@ec70725, com.thejoeun.practice1.boilerplate1.config.jwt.JwtTokenAuthenticationFilter@63614cdd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b441609, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34cb1310, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e9f48d4, org.springframework.security.web.session.SessionManagementFilter@7fb46c10, org.springframework.security.web.access.ExceptionTranslationFilter@1c879f07, org.springframework.security.web.access.intercept.AuthorizationFilter@51a5a8ba]
+2023-07-25T14:56:15.389+09:00  WARN 19940 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.PathRequest$H2ConsoleRequestMatcher@279ebd94. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-25T14:56:15.389+09:00  INFO 19940 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure org.springframework.boot.autoconfigure.security.servlet.PathRequest$H2ConsoleRequestMatcher@279ebd94
+2023-07-25T14:56:16.489+09:00  INFO 19940 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost/mydb?user=root&password=***'
+2023-07-25T14:56:16.638+09:00  INFO 19940 --- [    Test worker] c.t.p.b.Boilerplate1ApplicationTests     : Started Boilerplate1ApplicationTests in 6.835 seconds (process running for 8.554)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,15 +1,15 @@
 package com.thejoeun.practice1.boilerplate1.repository.mapper;
 
+//import com.thejoeun.practice1.boilerplate1.model.mapper.Member;
 import com.thejoeun.practice1.boilerplate1.model.Member;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 @Mapper
 public interface MemberMapper {
-    
-    Member selectMember (HashMap<String, Object> map);  // 멤버 하나만
-    
-    List<Member> selectMemberList ();    // 멤버 여러명
+    Optional<Member> selectMember(HashMap<String, Object> map);
+    Optional<List<Member>> selectMemberList();
 }

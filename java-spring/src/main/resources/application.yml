@@ -1,61 +1,57 @@
-# tomcat 서버 포트 8090 으로 실행
-server:
-  port: 8090
+server.port: 8091 # tomcat서버 포트 8091으로 설정
 
-# Spring Security 설정
 spring:
-#  security:
-#    user:
-#      name: user
-#      password: 1234
-#    oauth2:
-#      client:
-#        registration:
-#          google:
-##            client-id: 1050483374297-fo1gpuaunqgbo3qt1bi9jsg8t180h3ut.apps.googleusercontent.com
-##            client:-secret: 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
-#            client-id: 12352134
-#            client:-secret: asdfsadf
-#            scope:
-#              - email
-#              - profile
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 64680890268-vavsobuabuf5adj9d1rr06jnt6vl3u8t.apps.googleusercontent.com
+            client-secret: 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
+#            client-id: 6468089
+#            client-secret: GOC
+            scope:
+              - email
+              - profile
+    user:     # spring security 기본 아이디와 암호
+      name: user
+      password: 1234
   datasource:
-    generate-unique-name: false
-
-    #    MariaDB 연결
-    url: jdbc:mariadb://localhost:3306/mydb
+    url: jdbc:mariadb://localhost:3306/mydb         # mariadb
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: 1234
-
-    #    MySQL 연결
-    #    url: jdbc:mysql://localhost:3306/mydb  # mysql
-    #    driver-class-name: com.mysql.cj.jdbc.Driver
-    #    username: root
-    #    password: 1234
-
-  devtools:
-    livereload:
+  h2:
+    console:
+      path: /h2-console
       enabled: true
   jpa:
     show-sql: true
     defer-datasource-initialization: true # data.sql 사용을 위해서 필수적으로 등록
     properties:
       hibernate:
-        format_sql: true  # SQL문을 pretty하게 보여줌
-        use_sql_comments: true  # 주석을 달아주는 친구
-    #    generate-ddl: true   # true , false  ## JPA 영역 ### ddl-auto 가 있으면 이거 없어도됨
+        format_sql: true  # sql문 pretty하게 보여줌
+        use_sql_comments: true
+    generate-ddl: true   # true, false
     hibernate:
-      ddl-auto: create   # create, create-drop, update , validate, none
+      ddl-auto: create    # create, create-drop, update, validate, none
   sql:
     init:
-      mode: always  # always : embeded db가 아닌 외부 db 사용시 spring boot를 실행할때 마다 data.sql schema.sql import.sql 을 실행시켜준다.
+      mode: always
+      # always: embeded db가 아닌 외부 db 사용시 spring boot를 실행할때 마다 data.sql schema.sql import.sql을 항상 실행
+      # never: data.sql schema.sql import.sql을 실행하지 않음
+      encoding: utf-8
+  devtools:
+    livereload:
+      enabled: true
 
-# mybatis 설정
 mybatis:
-  mapper-locations: mybatis-mapper/**/*.xml
-  configuration: 
-    map-underscore-to-camel-case: true
-#  type-aliases-package: com.thejoeun.practice1.boilerplate1.model.mapper  # xml 에 있는 모델 앞의 패키지명을 생략 가능하도록 지ㅜ언
-  type-aliases-package: com.thejoeun.practice1.boilerplate1.model  # xml 에 있는 모델 앞의 패키지명을 생략 가능하도록 지ㅜ언
+  mapper-locations: mybatis-mapper/**/*-sql.xml # mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true # camel case
+  # xml에 있는 모델 앞의 패키지명을 생략 가능하도록 지원해주는 기능
+#  type-aliases-package: com.thejoeun.practice1.boilerplate1.model.mapper
+  type-aliases-package: com.thejoeun.practice1.boilerplate1.model
 
+jwt:
+  secret: 1234

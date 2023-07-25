@@ -29,26 +29,34 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
 	compileOnly 'org.projectlombok:lombok'
+
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	runtimeOnly 'org.postgresql:postgresql'
+
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	testAnnotationProcessor 'org.projectlombok:lombok'	// 추가
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.2'
 	testImplementation 'org.springframework.security:spring-security-test'
-
-	// assertJ 사용
-	testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
-	
-	// Lombok 테스트 사용
-	testAnnotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.projectlombok:lombok'
+	testImplementation group: 'org.assertj', name: 'assertj-core'	// 추가
+	testImplementation 'org.projectlombok:lombok' // 추가
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+jar {
+	enabled = false
 }
