@@ -22,6 +22,11 @@ function LoginForm() {
               </form>
               <button type="button" className="btn btn-secondary mt-3" >회원가입</button>
             </div>
+            <div>
+              <a href="http://localhost:8091/oauth2/authorization/google">
+                <img src="/thejoeun1-boilerplate1/img/google3.png" alt="google" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
