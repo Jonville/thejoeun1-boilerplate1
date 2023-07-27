@@ -24,7 +24,7 @@ function LoginForm() {
             </div>
             <div>
               <a href="http://localhost:8091/oauth2/authorization/google">
-                <img src="/thejoeun1-boilerplate1/img/google3.png" alt="google" />
+                <img src={`${process.env.PUBLIC_URL}/img/google3.png`} alt="google" />
               </a>
             </div>
           </div>
