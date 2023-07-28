@@ -8,7 +8,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "reactjs-debug Launch Chrome against localhost",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:3000/thejoeun1-boilerplate1",
       "webRoot": "${workspaceFolder}"
     }
   ]
