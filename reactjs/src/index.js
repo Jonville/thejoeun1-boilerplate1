@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { CookiesProvider } from 'react-cookie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  // <BrowserRouter basename='/thejoeun1-boilerplate1'>
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App />
-  </BrowserRouter>
+    // <BrowserRouter basename='/thejoeun1-boilerplate1'>
+  <CookiesProvider>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <App />
+    </BrowserRouter>
+  </CookiesProvider>
   // </React.StrictMode>
 );
 
