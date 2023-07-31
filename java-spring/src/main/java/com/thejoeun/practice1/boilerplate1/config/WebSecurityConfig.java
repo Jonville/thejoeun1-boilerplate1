@@ -86,11 +86,11 @@ public class WebSecurityConfig {
             .requestMatchers(mvcMatcherBuilder.pattern("/api/auth/**")).permitAll()
 //            .requestMatchers(AntPathRequestMatcher.antMatcher("/auth2/**")).permitAll()
             .anyRequest().authenticated()
-//            .and()
-//            .oauth2Login()
-//            .successHandler(customAuth2SuccessHandler())
-//            .userInfoEndpoint() // OAuth 2.0 Provider로부터 사용자 정보를 가져오는 엔드포인트를 지정하는 메서드
-//            .userService(oAuth2CustomUserService)   // OAuth 2.0 인증이 처리되는데 사용될 사용자 서비스를 지정하는 메서드
+            .and()  // oauth 구글 로그인
+            .oauth2Login()
+            .successHandler(customAuth2SuccessHandler())
+            .userInfoEndpoint() // OAuth 2.0 Provider로부터 사용자 정보를 가져오는 엔드포인트를 지정하는 메서드
+            .userService(oAuth2CustomUserService)   // OAuth 2.0 인증이 처리되는데 사용될 사용자 서비스를 지정하는 메서드
         ;
         http.apply(new JwtSecurityConfig(jwtTokenProvider));
 

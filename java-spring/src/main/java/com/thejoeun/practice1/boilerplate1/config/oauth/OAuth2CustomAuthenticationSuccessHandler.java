@@ -20,7 +20,7 @@ import java.time.Duration;
 @Component
 //public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 public class OAuth2CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
-    public static final String REDIRECT_URI = "http://localhost:3000/oauth2login/callback";
+    public static final String REDIRECT_URI = "http://localhost:3000/thejoeun1-boilerplate1/oauth2login/callback";
     //    public static final String REDIRECT_URI = "http://localhost:3000";
     public static final String REFRESH_TOKEN_COOKIE_NAME = "refresh_token";
 

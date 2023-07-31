@@ -95,8 +95,8 @@ function LoginForm() {
               <button type="button" className="btn btn-secondary mt-3">회원가입</button>
             </div>
             <div>
-              <a href="http://localhost:8091/oauth2/authorization/google">
-                <img src={`${process.env.PUBLIC_URL}/img/google3.png`} alt="google" />
+            <a href={`${process.env.REACT_APP_API_GATEWAY_HOST}/oauth2/authorization/google`}>
+            <img src={`${process.env.REACT_APP_PUBLIC_URL}/img/google3.png`} alt="google" />
               </a>
             </div>
           </div>

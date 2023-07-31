@@ -6,8 +6,8 @@ spring:
       client:
         registration:
           google:
-            client-id: 64680890268-vavsobuabuf5adj9d1rr06jnt6vl3u8t.apps.googleusercontent.com
-            client-secret: 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
+            client-id: 1050483374297-fo1gpuaunqgbo3qt1bi9jsg8t180h3ut.apps.googleusercontent.com
+            client-secret: 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
 #            client-id: 6468089
 #            client-secret: GOC
             scope:
