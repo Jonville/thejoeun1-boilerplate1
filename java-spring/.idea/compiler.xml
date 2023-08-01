@@ -13,7 +13,7 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.0.10-SNAPSHOT/5a0fe26378df2bacf89c1cb43d9184cbbb7bd35d/spring-boot-configuration-processor-3.0.10-SNAPSHOT.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.0.10-SNAPSHOT/8d1b91f6b8822739bb532cae4eabd84182d2879f/spring-boot-configuration-processor-3.0.10-SNAPSHOT.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
         </processorPath>
         <module name="boilerplate1.main" />
